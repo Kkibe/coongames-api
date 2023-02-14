@@ -3,12 +3,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const PlanSchema = new Schema({
-    //can only be monthly and weekly
     name: {
         type: String,
         enum: ["free", "basic", "pro"],
         default: "free",
-        //enum: ['weekly', 'monthly', 'yearly]
     },
     price: {
         type: Number

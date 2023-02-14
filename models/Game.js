@@ -23,10 +23,6 @@ const GameSchema = new mongoose.Schema(
       type: Array,
       required: false
     },
-    downloads: {
-      type: Number,
-      default: 0
-    },
     premium: {
       type: Boolean,
       required: false,
