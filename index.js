@@ -18,7 +18,9 @@ const subscriptionRoute = require('./routes/subscription');
 const bodyParser = require("body-parser");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 app.use(express.static('images'));
 app.use(express.static('pages'));
 app.use(bodyParser.urlencoded({
