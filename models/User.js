@@ -20,6 +20,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    about: {
+      type: String,
+      required: false,
+    },
     subscription: {
       type: String,
       default: "free"
