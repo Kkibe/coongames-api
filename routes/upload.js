@@ -1,5 +1,5 @@
 const multer = require("multer");
-const { verifyToken } = require("./verifyToken");
+const { verifyTokenAndAuthorization } = require("./verifyToken");
 const router = require('express').Router();
 const storage = multer.diskStorage({
     destination: "images",
@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
     }
 })
 const upload = multer({storage: storage});
-router.post("/", upload.single('img'), (req, res) => {
+router.post("/", verifyTokenAndAuthorization, upload.single('img'), (req, res) => {
     res.status(200).json("File has been uploaded");
 });
 module.exports = router;
