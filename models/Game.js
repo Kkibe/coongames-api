@@ -7,15 +7,15 @@ const GameSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    desc: {
+    description: {
       type: String,
       required: true,
     },
-    img: {
+    thumbnail: {
       type: String,
       required: true,
     },
-    file: {
+    url: {
       type: String,
       required: true,
     },
