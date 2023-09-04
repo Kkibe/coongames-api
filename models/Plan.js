@@ -17,6 +17,13 @@ const PlanSchema = new Schema({
     hasTrial: {
         type: Boolean,
         default: false,
+        duration: 86400
+    },
+    coupon: {
+        type: Number
+    },
+    features: {
+        type: Array
     }
 
 }, {timestamps: true});

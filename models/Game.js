@@ -11,6 +11,10 @@ const GameSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    levels: {
+      type: Number,
+      default: 1,
+    },
     thumbnail: {
       type: String,
       required: true,
@@ -18,6 +22,22 @@ const GameSchema = new mongoose.Schema(
     url: {
       type: String,
       required: true,
+    },
+    reviews: {
+      type: Object,
+      default:{
+        username: String,
+        review: String,
+        stars: Number
+      }
+    },
+    publisher: {
+      type: String,
+      required: true,
+    },
+    downloads: {
+      type: Number,
+      default: 0,
     },
     categories: {
       type: Array,
@@ -28,6 +48,7 @@ const GameSchema = new mongoose.Schema(
       required: false,
     }
   },
+
   {timestamps: true}
 );
 
